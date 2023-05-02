@@ -10,8 +10,8 @@ jobs:
   test:
     env:
       MONGODB_CLUSTER_ADDRESS: clusterExample.63perfg.mongodb.net
-      MONGODB_USERNAME: test
-      MONGODB_PASSWORD: dummyData
+      MONGODB_USERNAME: ${{ secrets.MONGODB_USERNAME }}}
+      MONGODB_PASSWORD: ${{ secrets.MONGODB_PASSWORD }}
       PORT: 1234
     environment: testing
     runs-on: ubuntu-latest
